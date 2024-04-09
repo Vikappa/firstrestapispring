@@ -7,12 +7,12 @@ public class Author {
     private String nome;
     private String cognome;
     private String email;
-    private LocalDate dataDiNascita;
+    private String dataDiNascita;
     private String avatar;
 
     public Author() {}
 
-    public Author(String nome, String cognome, String email, LocalDate dataDiNascita, String avatar) {
+    public Author(String nome, String cognome, String email, String dataDiNascita, String avatar) {
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
@@ -20,7 +20,7 @@ public class Author {
         this.avatar = avatar;
     }
 
-    public Author(int id, String nome, String cognome, String email, LocalDate dataDiNascita, String avatar) {
+    public Author(int id, String nome, String cognome, String email, String dataDiNascita, String avatar) {
         this.id = id;
         this.nome = nome;
         this.cognome = cognome;
@@ -61,11 +61,11 @@ public class Author {
         this.email = email;
     }
 
-    public LocalDate getDataDiNascita() {
+    public String getDataDiNascita() {
         return dataDiNascita;
     }
 
-    public void setDataDiNascita(LocalDate dataDiNascita) {
+    public void setDataDiNascita(String dataDiNascita) {
         this.dataDiNascita = dataDiNascita;
     }
 
@@ -75,5 +75,17 @@ public class Author {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                ", email='" + email + '\'' +
+                ", dataDiNascita=" + dataDiNascita +
+                ", avatar='" + avatar + '\'' +
+                '}';
     }
 }

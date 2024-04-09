@@ -1,7 +1,7 @@
 package konstantinesoft.firstrestapispring.entities;
 
 public class BlogPost {
-    private int id;
+    private int postID;
     private String categoria;
     private String titolo;
     private String cover;
@@ -10,16 +10,8 @@ public class BlogPost {
 
     public BlogPost() {}
 
-    public BlogPost(String categoria, String titolo, String cover, String contenuto, int tempoLettura) {
-        this.categoria = categoria;
-        this.titolo = titolo;
-        this.cover = cover;
-        this.contenuto = contenuto;
-        this.tempoLettura = tempoLettura;
-    }
-
     public BlogPost(int id, String categoria, String titolo, String cover, String contenuto, int tempoLettura) {
-        this.id = id;
+        this.postID = id;
         this.categoria = categoria;
         this.titolo = titolo;
         this.cover = cover;
@@ -28,11 +20,11 @@ public class BlogPost {
     }
 
     public int getId() {
-        return id;
+        return postID;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.postID = id;
     }
 
     public String getCategoria() {
@@ -73,5 +65,17 @@ public class BlogPost {
 
     public void setTempoLettura(int tempoLettura) {
         this.tempoLettura = tempoLettura;
+    }
+
+    @Override
+    public String toString() {
+        return "BlogPost{" +
+                "postID=" + postID +
+                ", categoria='" + categoria + '\'' +
+                ", titolo='" + titolo + '\'' +
+                ", cover='" + cover + '\'' +
+                ", contenuto='" + contenuto + '\'' +
+                ", tempoLettura=" + tempoLettura +
+                '}';
     }
 }
